@@ -1,42 +1,37 @@
+rapidsms-dummydata
+==================
 
+``rapidsms-dummydata`` is a simple RapidSMS application to generate data for testing.
 
-dummydata
-========================
+Installation
+------------
 
-Welcome to the documentation for django-dummydata!
+To install and setup ``rapidsms-dummydata``, follow these steps:
 
+1. Use pip to install the application::
 
-Documentation
------------------------------------
+    pip install -e git+https://github.com/caktus/rapidsms-dummydata.git#egg=dummydata 
 
-Documentation on using django-dummydata is available on 
-`Read The Docs <http://readthedocs.org/docs/django-dummydata/>`_.
+1. Add ``dummydata`` to ``INSTALLED_APPS`` in your settings file::
 
+    INSTALLED_APPS = [
+        "dummydata",
+    ]
 
-Running the Tests
-------------------------------------
+2. Add the ``dummydata`` urls to your urlconf somewhere::
 
-You can run the tests with via::
+    urlpatterns = patterns('',
+        (r'^dummydata/', include('dummydata.urls')),
+    )
 
-    python setup.py test
+3. If wanted, add a navigation item to your ``rapidsms/_nav_bar.html`` template::
 
-or::
+    {% load url from future %}
 
-    python runtests.py
-
+    <li><a href="{% url 'generate-contacts' %}">Dummy Data</a></li>
 
 License
---------------------------------------
+-------
 
 django-dummydata is released under the BSD License. See the 
-`LICENSE <https://github.com/caktus/django-dummydata/blob/master/LICENSE>`_ file for more details.
-
-
-Contributing
---------------------------------------
-
-If you think you've found a bug or are interested in contributing to this project
-check out `django-dummydata on Github <https://github.com/caktus/django-dummydata>`_.
-
-Development sponsored by `Caktus Consulting Group, LLC
-<http://www.caktusgroup.com/services>`_.
+`LICENSE <https://github.com/caktus/rapidsms-dummydata/blob/master/LICENSE>`_ file for more details.

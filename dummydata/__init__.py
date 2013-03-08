@@ -1,3 +1,4 @@
-"<Include a description of your project>"
+"Generate random RapidSMS data for testing."
 
-__version__ = '0.0.0'
+
+__version__ = '0.0.1'

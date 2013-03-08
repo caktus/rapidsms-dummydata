@@ -1,12 +1,16 @@
-"Replace this with more appropriate tests for your application."
+"""
+This file demonstrates writing tests using the unittest module. These will pass
+when you run "manage.py test".
+
+Replace this with more appropriate tests for your application.
+"""
 
 from django.test import TestCase
 
 
 class SimpleTest(TestCase):
-
-    def test_developer_is_lazy(self):
+    def test_basic_addition(self):
         """
-        Tests that developer has written any tests.
+        Tests that 1 + 1 always equals 2.
         """
-        self.fail('You need to write some tests.')
+        self.assertEqual(1 + 1, 2)

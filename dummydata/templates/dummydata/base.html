@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+<div class="row-fluid">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li class="nav-header">Actions</li>
+            <li><a href="{% url 'send-bulk-message' %}">Bulk Message</a></li>
+            <li class="nav-header">Generate</li>
+            <li><a href="{% url 'generate-contacts' %}">Contacts</a></li>
+            <li><a href="{% url 'generate-connections' %}">Connections</a></li>
+            <li class="nav-header">Delete</li>
+            <li><a href="{% url 'delete-connections' %}">Connections</a></li>
+        </ul>
+    </div>
+    <div class="span8">
+        {% block sub-content %}{% endblock %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "dummydata/base.html" %}
+{% load url from future %}
+
+{% block title %}Send Bulk Message{% endblock title %}
+
+{% block sub-content %}
+    <form class="form-horizontal" action='#' method='POST'>
+        <legend>Send Bulk Message</legend>
+        {% include "dummydata/includes/_form.html" %}
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn">Send</button>
+            </div>
+        </div>
+    </form>
+{% endblock sub-content %}

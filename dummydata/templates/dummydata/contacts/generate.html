@@ -1,0 +1,20 @@
+{% extends "dummydata/base.html" %}
+{% load url from future %}
+
+{% block title %}Generate Contacts{% endblock title %}
+
+{% block sub-content %}
+    <form class="form-horizontal" action='#' method='POST'>
+        <legend>Generate Contacts</legend>
+        <div class="alert alert-block">
+            <h4>Warning!</h4>
+            Using this form to generate contacts will remove all existing contacts from your database.
+        </div>
+        {% include "dummydata/includes/_form.html" %}
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn">Generate</button>
+            </div>
+        </div>
+    </form>
+{% endblock sub-content %}
